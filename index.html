@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Document</title>
+    <style>
+        .load{
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border: 10px solid #8822aa;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            animation: rotate 1.0s linear infinite;
+            -webkit-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes rotate{
+            from{
+                -webkit-transform: rotate(0deg);
+            }
+            to{
+                -webkit-transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body class="bg-gray-100 flex flex-col font-sans min-h-screen antialiased">
     <header>
@@ -46,6 +76,7 @@
                 <h2 class="font-semibold text-xl">
                      Generated Blog Article
                 </h2>
+                <div class="load" id="load-circle" style="display: none;"></div>
                 <div id="blogContent" class="text-gray-700 space-y-4 mt-2">
                     <!-- blog content displayed here -->
                 </div>
@@ -55,5 +86,9 @@
             Powered by <a href="https://www.linkedin.com/in/love-olubummo-dvelat/" class="text-blue-600"><i>Dvelat Codes</i></a>
         </footer>
     </main>
+
+    <script>
+
+    </script>
 </body>
 </html>
