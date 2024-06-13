@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .load{
+            width: 100px;
+            height: 100px;
+            margin: 110px auto 0;
+            border: 10px solid #8822aa;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            animation: rotate 1.0s linear infinite;
+            -webkit-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @-webkit-keyframes rotate{
+            from{
+                -webkit-transform: rotate(0deg);
+            }
+            to{
+                -webkit-transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col font-sans min-h-screen antialiased">
+    <header>
+        <nav class="bg-blue-600 p-4 flex justify-between">
+            <div>
+                <h1 class="text-white text-3xl font-bold">
+                    AI BLOG GENERATOR
+                </h1>
+            </div>
+            <div>
+                <a href="#" class="text-white hover:underline">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="bg-white transition-transform transform hover:scale-125 mt-20 pt-4 pb-6 max-w-3xl rounded-lg mx-auto shadow-sm px-6">
+            <!-- introduction section -->
+            <section class="text-center">
+                <h2 class="font-semibold text-2xl">
+                    Welcome To The AI Blog Generator
+                </h2>
+                <p class="mt-2 text-gray-700">
+                    Generate high-quality blog articles from youtube videos using artificial intelligence. Simply enter the link to the YouTube video below and let AI create the content for you!
+                </p>
+            </section>
+            <!-- youtube section -->
+            <section>
+                <h2 class="text-xl font-semibold mt-4">
+                    Enter Youtube Video Link
+                </h2>
+                <div class="flex space-x-4">
+                    <input type="url" id="youtubeLink" placeholder="paste youtube link..." class="border border-blue-400  p-2 rounded-l-md flex-grow">
+                    <button id="generateButton" class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition:colors">Generate</button>
+                </div>
+            </section>
+
+            <!-- generated blog display -->
+            <section class="mt-10 flex-grow">
+                <h2 class="font-semibold text-xl">
+                     Generated Blog Article
+                </h2>
+                <div class="load" id="load-circle" style="display: none;"></div>
+                <div id="blogContent" class="text-gray-700 space-y-4 mt-2">
+                    <!-- blog content displayed here -->
+                </div>
+            </section>
+        </div>
+        <footer class="text-center mt-6 font-semibold">
+            Powered by <a href="https://www.linkedin.com/in/love-olubummo-dvelat/" class="text-blue-600"><i>Dvelat Codes</i></a>
+        </footer>
+    </main>
+
+    <script>
+
+    </script>
+</body>
+</html>
